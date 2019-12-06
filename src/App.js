@@ -8,6 +8,7 @@ import Header from "./quizcomponents/Header";
 import Multiplier from './quizcomponents/Multiplier';
 import EvenClicks from './quizcomponents/EvenClicks';
 import CountBy from './quizcomponents/CountBy';
+import HideMe from './quizcomponents/HideMe';
 
 const App = () => (
 
@@ -26,6 +27,11 @@ const App = () => (
             <Route exact path="/components" render={ () => ( 
                 <CountBy 
                     step={ 5 } 
+                />
+            ) } />
+            <Route exact path="/components" render={ () => ( 
+                <HideMe 
+                    content="Cows can sleep standing up, but they can only dream lying down." 
                 />
             ) } />
 
