@@ -7,6 +7,7 @@ import {
 import Header from "./quizcomponents/Header";
 import Multiplier from './quizcomponents/Multiplier';
 import EvenClicks from './quizcomponents/EvenClicks';
+import CountBy from './quizcomponents/CountBy';
 
 const App = () => (
 
@@ -22,6 +23,11 @@ const App = () => (
                 />
             ) } />
             <Route exact path="/components" component= { EvenClicks } />
+            <Route exact path="/components" render={ () => ( 
+                <CountBy 
+                    step={ 5 } 
+                />
+            ) } />
 
         </>
     </Router>
