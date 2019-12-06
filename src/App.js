@@ -18,27 +18,23 @@ const App = () => (
 
             <Header />
 
-            <Route exact path="/components" render={ () => ( 
+            <Route path="/multiplier/:x/:y" render={ ({ match }) => ( 
                 <Multiplier 
-                    x={ 5 } 
-                    y={ 7 }
+                    x={ match.params.x } 
+                    y={ match.params.y }
                 />
             ) } />
-            <Route exact path="/components" component= { EvenClicks } />
-            <Route exact path="/components" render={ () => ( 
-                <CountBy 
-                    step={ 5 } 
-                />
+            <Route exact path="/even-clicks" component= { EvenClicks } />
+            <Route path="/count-by/:step" render={ ({ match }) => ( 
+                <CountBy step={ match.params.step } />
             ) } />
-            <Route exact path="/components" render={ () => ( 
+            <Route exact path="/hide-me" render={ () => ( 
                 <HideMe 
                     content="Cows can sleep standing up, but they can only dream lying down." 
                 />
             ) } />
-            <Route exact path="/components" render={ () => (
-                <MinimumLength 
-                    length={ 30 }
-                /> 
+            <Route path="/minimum/:length" render={ ({ match }) => (
+                <MinimumLength length={ match.params.length }/> 
             ) } />
 
         </>

@@ -22,7 +22,7 @@ class CountBy extends Component {
         let { initial } = this.state;
 
         this.setState( { 
-            initial: initial + step,
+            initial: initial + +step,
         } );
         
     }
