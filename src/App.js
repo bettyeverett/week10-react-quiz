@@ -9,6 +9,7 @@ import Multiplier from './quizcomponents/Multiplier';
 import EvenClicks from './quizcomponents/EvenClicks';
 import CountBy from './quizcomponents/CountBy';
 import HideMe from './quizcomponents/HideMe';
+import MinimumLength from './quizcomponents/MinimumLength';
 
 const App = () => (
 
@@ -33,6 +34,11 @@ const App = () => (
                 <HideMe 
                     content="Cows can sleep standing up, but they can only dream lying down." 
                 />
+            ) } />
+            <Route exact path="/components" render={ () => (
+                <MinimumLength 
+                    length={ 30 }
+                /> 
             ) } />
 
         </>
